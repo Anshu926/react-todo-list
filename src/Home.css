@@ -1,0 +1,166 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff3ca;
+  color: #333;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+  margin-top: 40px;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #2c3e50;
+  padding: 0 1rem;
+}
+
+/* Todo Container */
+.todo_box {
+  width: 90vw;
+  max-width: 800px;
+  background-color: #fffcf0;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(255, 165, 0, 0.3);
+  border-radius: 18px;
+  margin: 1.5rem auto;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Todo Input */
+.todo_input {
+  padding: 12px;
+  width: calc(100% - 24px);
+  font-size: 1rem;
+  border: 2px solid #ffcc80;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: border-color 0.3s ease;
+}
+
+.todo_input:focus {
+  border-color: darkorange;
+}
+
+/* Add Button */
+.add_btn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 12px 30px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.add_btn:hover {
+  background-color: darkorange;
+  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* Todo List */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+li {
+  background-color: #ffffff;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 6px solid orange;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateX(4px);
+}
+
+/* Empty List Message */
+h3 {
+  color: grey;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+
+  .todo_box {
+    padding: 1.5rem;
+  }
+
+  .add_btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+
+  .todo_input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+  }
+
+  .todo_box {
+    padding: 1rem;
+  }
+
+  .add_btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+  }
+}
+.delete_btn {
+  float: right;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-left: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete_btn:hover {
+  background-color: darkred;
+}

@@ -1,0 +1,88 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #ffefba, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: #4a4a4a;
+}
+
+
+
+body {
+  animation: gradientBG 10s ease-in-out infinite alternate;
+}
+
+/* Initial Container Styles */
+.initial-container {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* softer orangish yellow */
+  box-shadow: 0 6px 25px rgba(255, 165, 50, 0.6); /* richer orangish glow */
+  color: #3e2f0b; /* dark warm brown */
+  border-radius: 2rem;
+  width: 80vw;
+  margin: 25vh auto 0;
+  backdrop-filter: blur(7px);
+  animation: fadeIn 1s ease-out forwards;
+  transform: translateY(-20px);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigate Button Styles */
+.navigate-button {
+  background-color: #ff6f3c; /* warm coral */
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 111, 60, 0.6);
+}
+
+/* Button hover effect */
+.navigate-button::before {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-30deg);
+  transition: left 0.4s ease;
+  border-radius: 12px 0 0 12px;
+}
+
+.navigate-button:hover::before {
+  left: 120%;
+}
+
+.navigate-button:hover {
+  background-color: #e0551f; /* darker coral */
+  box-shadow: 0 6px 20px rgba(224, 85, 31, 0.7);
+}
